@@ -16,7 +16,7 @@ $(function (){
     });
 
     $('.set-attr').on('click', function() {
-        console.log($(this).attr('name', 'button'));
+        $(this).attr('name', 'button');
     });
 
     $('.alert-on-click').click( function() {
@@ -32,11 +32,15 @@ $(function (){
     });
 
     $('.closest-element').on('click', function() {
-        console.log($(this).parent(this));
+        console.log($(this).parent());
     });
 
     $('.each-btn-text').on('click', function() {
-        console.log.each('text');
+        var text = [];
+        $('button').each(function () {
+            text.push($(this).text());
+        });
+        console.log(text);
     });
 
     $('.find-me').on('click', function() {
@@ -60,6 +64,14 @@ $(function (){
     });
 
     $('.data-about-me').on('click', function() {
-        console.log.each($(this).attr('class', 'type'));
+        var $this = $(this);
+        console.log('Height:', $this.height());
+        console.log('Width:', $this.width());
+        console.log('Position:', $this.position());
+        console.log('Attributes:', $this.attr('class'));
+        console.log('Attributes:', $this.attr('type'));
+        console.log('Parent:', $this.parent());
+        console.log('Siblings:', $this.siblings());
+        console.log('Text:', $this.text());
     });
 });
