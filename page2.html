@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<form>
+    <ul class="first">
+        <li>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="first_name">
+        </li>
+        <li>
+            <label for="last-name">Фамилия:</label>
+            <input type="text" id="last-name" name="last_name">
+        </li>
+    </ul>
+    <h4>Сколько книг вы прочитали?</h4>
+    <ul>
+        <li>
+            <input type="radio" name="quantity" value="0-10" id="quantity-first">
+            <label for="quantity-first">0-10</label>
+        </li>
+        <li>
+            <input type="radio" name="quantity" value="11-20" id="quantity-second">
+            <label for="quantity-second">11-20</label>
+        </li>
+        <li>
+            <input type="radio" name="quantity" value="21-50" id="quantity-third">
+            <label for="quantity-third">21-50</label>
+        </li>
+        <li>
+            <input type="radio" name="quantity" value="50+" id="quantity-fourth">
+            <label for="quantity-fourth">50+</label>
+        </li>
+    </ul>
+    <h4><label for="type">Выберите тип:</label></h4>
+    <select name="type" id="type">
+        <option value="checkbox">checkbox</option>
+        <option value="radio">radio</option>
+        <option value="text">text</option>
+        <option value="submit">submit</option>
+    </select>
+    <ul>
+        <li>
+            <input type="checkbox" name="weekend-sleep" id="sleep">
+            <label for="sleep">Сплю</label>
+        </li>
+        <li>
+            <input type="checkbox" name="weekend-walk" id="walk">
+            <label for="walk">Гуляю с друзьями</label>
+        </li>
+        <li>
+            <input type="checkbox" name="weekend-read" id="read">
+            <label for="read">Читаю</label>
+        </li>
+        <li>
+            <input type="checkbox" name="weekend-play" id="play">
+            <label for="play">Играю в игры</label>
+        </li>
+        <li>
+            <select multiple size="3" name="position" title="Position">
+                <option value="1">Первая позиция</option>
+                <option value="2">Вторая позиция</option>
+                <option value="3">Третья позиция</option>
+            </select>
+        </li>
+    </ul>
+    <button type="submit" class="btn">Отправить</button>
+</form>
+<a href="page1.html">Prev page</a>
+<script src="lib/jquery-2.2.4.min.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
