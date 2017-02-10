@@ -75,3 +75,26 @@ $(function (){
         console.log('Text:', $this.text());
     });
 });
+
+
+
+$(function (){
+    $(':input').on('change', function() {
+        console.log($(this).val());
+    });
+
+    $('form').on('submit', function(event) {
+        event.preventDefault();
+        $(':input').each(function () {
+            console.log($(this).val());
+        });
+    });
+
+    $('#name').on('keyup', function () {
+        $('#last-name').val($(this).val())
+    });
+
+    $('#last-name').on('keyup', function () {
+        $('#name').val($(this).val())
+    });
+});
